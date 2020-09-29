@@ -26,6 +26,9 @@ void ChooseAGame(string prompt);
 void HangmanGame();
 void GetPlayerGuess(string THE_WORD, string& soFar);
 void CheckPlayerGuess(char guess, string THE_WORD, string& soFar);
+string numberString(string plsNum);
+int numberString(int plsNum);
+void AskForNumberGame();
 
 int main()
 {
@@ -43,11 +46,32 @@ void ChooseAGame(string prompt) {
         HangmanGame();
         break;
     case games::ASKFORNUMBER:
-        cout << "TEST2";
+        AskForNumberGame();
         break;
     default:
         break;
     }
+}
+
+
+string numberString(string plsNum) {
+    return plsNum;
+}
+
+int numberString(int plsNum) {
+    return plsNum;
+}
+
+void AskForNumberGame() {
+    string askNumber;
+    int askNum;
+    cout << "Gimme a number in letters..." << "\n";
+    cin >> askNumber;
+    cout << "String function:" << numberString(askNumber) << "\n";
+
+    cout << "Now give me an normal number";
+    cin >> askNum;
+    cout << "Overload to int function:" << numberString(askNum) << "\n";
 }
 
 void CheckPlayerGuess(char guess, string THE_WORD, string& soFar) {

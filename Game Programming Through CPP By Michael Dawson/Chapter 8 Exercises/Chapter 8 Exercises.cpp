@@ -1,5 +1,5 @@
-// Chapter 8 Exercises.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// Chapter 8 Exercises.cpp
+// 
 
 #include <iostream>
 

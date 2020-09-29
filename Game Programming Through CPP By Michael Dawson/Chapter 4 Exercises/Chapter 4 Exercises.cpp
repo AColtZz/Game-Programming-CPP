@@ -106,40 +106,6 @@ namespace GList {
 		cout << "\n5. Sort Game List";
 		cout << "\n6. Exit Game List\n\n";
 		cin >> userChoice;
-
-		switch (userChoice)
-		{
-		case choices::ADDGAME:
-			cout << "\nAdd the game.";
-			cout << "\nEnter a game to add: ";
-			AddGame();
-			break;
-		case choices::REMOVEGAME:
-			cout << "\nRemove a game.";
-			cout << "\nEnter a game to remove: ";
-			RemoveGame();
-			break;
-		case choices::SHOWLIST:
-			cout << "\nYour list of Games:\n";
-			ShowGameList();
-			break;
-		case choices::SHUFFLELIST:
-			cout << "\nRandomizing games.";
-			ShuffleList();
-			break;
-		case choices::SORTLIST:
-			cout << "\nSorting your list of Games:\n";
-			SortList();
-			break;
-		case choices::EXIT:
-			cout << "\nExiting list of Games...\n";
-			Exit();
-			break;
-		default:
-			cout << "\n Defaulting..." << endl;
-			Listening();
-			break;
-		}
 	}
 }
 
@@ -150,6 +116,40 @@ int main() {
 	while (GList::isPlaying)
 	{
 		GList::Listening();
+
+		switch (GList::userChoice)
+		{
+		case GList::choices::ADDGAME:
+			cout << "\nAdd the game.";
+			cout << "\nEnter a game to add: ";
+			GList::AddGame();
+			break;
+		case GList::choices::REMOVEGAME:
+			cout << "\nRemove a game.";
+			cout << "\nEnter a game to remove: ";
+			GList::RemoveGame();
+			break;
+		case GList::choices::SHOWLIST:
+			cout << "\nYour list of Games:\n";
+			GList::ShowGameList();
+			break;
+		case GList::choices::SHUFFLELIST:
+			cout << "\nRandomizing games.";
+			GList::ShuffleList();
+			break;
+		case GList::choices::SORTLIST:
+			cout << "\nSorting your list of Games:\n";
+			GList::SortList();
+			break;
+		case GList::choices::EXIT:
+			cout << "\nExiting list of Games...\n";
+			GList::Exit();
+			break;
+		default:
+			cout << "\n Defaulting..." << endl;
+			GList::Listening();
+			break;
+		}
 	}
 
 	return 0;
